@@ -7,12 +7,13 @@ def single_number(nums: list[int]) -> int:
     for num in nums:
         result ^= num
     return result
-
+    
 # Alternative approach using a set
 def single_number(nums: list[int]) -> int:
     seen = set()
     for num in nums:
         if num in seen:
-            return num
+            seen.remove(num)
         else:
             seen.add(num)
+    return seen.pop()
