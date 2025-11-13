@@ -16,10 +16,12 @@ All the values after node should be in the same order.
 #         self.next = None
 
 class Solution:
-    def deleteNode(self, node):
+    def delete_node(self, node):
         """
+        Delete the given node in-place (snake_case name, PEP8 style).
+
         :type node: ListNode
         :rtype: void Do not return anything, modify node in-place instead.
         """
-        node.val=node.next.val
-        node.next=node.next.next
+        node.val = node.next.val
+        node.next = node.next.next
